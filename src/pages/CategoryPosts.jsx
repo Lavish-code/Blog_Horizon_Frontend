@@ -63,7 +63,7 @@ const CategoryPosts = () => {
     const fetchPosts = async () => {
       setIsLoading(true);
       try {
-        const response = await axios.get(`https://blog-horizon-backend.onrender.com/posts/categories/${category}`);
+        const response = await axios.get(`https://blog-horizon-backend.onrender.com/api/posts/categories/${category}`);
         setPosts(response?.data); // Assuming response.data contains the list of posts
       } catch (err) {
         console.error('Error fetching posts for category:', err);

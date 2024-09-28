@@ -104,7 +104,7 @@ const Dashboard = () => {
       setIsLoading(true);
       try {
         const response = await axios.get(
-          `https://blog-horizon-backend.onrender.com/posts/users/${id}`,
+          `https://blog-horizon-backend.onrender.com/api/posts/users/${id}`,
           {
             withCredentials: true,
             headers: { Authorization: `Bearer ${token}` },

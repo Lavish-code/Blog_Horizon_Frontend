@@ -58,7 +58,7 @@ const Posts = () => {
         const fetchPosts = async () => {
             setIsLoading(true);
             try {
-                const response = await axios.get('https://blog-horizon-backend.onrender.com/posts')
+                const response = await axios.get('https://blog-horizon-backend.onrender.com/api/posts')
                 setPosts(response?.data)
             } catch (err) {
                 console.log(err)

@@ -84,7 +84,7 @@ const Login = () => {
     e.preventDefault();
     setError('');
     try {
-      const response = await axios.post('https://blog-horizon-backend.onrender.com/users/login', userData);
+      const response = await axios.post('https://blog-horizon-backend.onrender.com/api/users/login', userData);
       const user = await response.data;
       setCurrentUser(user);
       navigate('/');

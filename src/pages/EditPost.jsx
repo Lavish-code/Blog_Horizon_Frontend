@@ -181,7 +181,7 @@ const EditPost = () => {
 
     try {
       const response = await axios.patch(
-        `https://blog-horizon-backend.onrender.com/posts/${id}`,
+        `https://blog-horizon-backend.onrender.com/api/posts/${id}`,
         postData,
         { withCredentials: true, headers: { Authorization: `Bearer ${token}` } }
       );

@@ -77,7 +77,7 @@ const PostDetail = () => {
     const getPost = async () => {
       setIsLoading(true);
       try {
-        const response = await axios.get(`https://blog-horizon-backend.onrender.com/posts/${id}`);
+        const response = await axios.get(`https://blog-horizon-backend.onrender.com/api/posts/${id}`);
         setPost(response.data);
       } catch (error) {
         setError(error);

@@ -146,7 +146,7 @@ const CreatePost = () => {
 
     try {
       const response = await axios.post(
-        'https://blog-horizon-backend.onrender.com/posts',
+        'https://blog-horizon-backend.onrender.com/api/posts',
         postData,
         {
           withCredentials: true,

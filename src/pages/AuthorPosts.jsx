@@ -64,7 +64,7 @@ const AuthorPosts = () => {
     const fetchPosts = async () => {
       setIsLoading(true);
       try {
-        const response = await axios.get(`https://blog-horizon-backend.onrender.com/posts/users/${id}`);
+        const response = await axios.get(`https://blog-horizon-backend.onrender.com/api/posts/users/${id}`);
         setPosts(response?.data); // Assuming response.data contains the list of posts
       } catch (err) {
         console.error('Error fetching posts by author:', err);

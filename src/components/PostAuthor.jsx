@@ -61,7 +61,7 @@ const PostAuthor = ({ authorID, createdAt }) => {
   useEffect(() => {
     const getAuthor = async () => {
       try { 
-        const response = await axios.get(`https://blog-horizon-backend.onrender.com/users/${authorID}`)
+        const response = await axios.get(`https://blog-horizon-backend.onrender.com/api/users/${authorID}`)
         setAuthor(response?.data)
       } catch (error) {
         console.log(error)

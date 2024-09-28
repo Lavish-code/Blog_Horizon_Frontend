@@ -64,7 +64,7 @@ const Authors = () => {
     const getAuthors = async () => {
       setIsLoading(true);
       try {
-        const response = await axios.get('https://blog-horizon-backend.onrender.com/users');
+        const response = await axios.get('https://blog-horizon-backend.onrender.com/api/users');
         setAuthors(response.data); // Assuming response.data contains the list of authors
       } catch (error) {
         console.log('Error fetching authors:', error);

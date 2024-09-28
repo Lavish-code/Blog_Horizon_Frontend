@@ -151,7 +151,7 @@ const UserProfile = () => {
   useEffect(() => {
     const getUser = async () => {
       try {
-        const response = await axios.get(`https://blog-horizon-backend.onrender.com/users/${currentUser.id}`, {
+        const response = await axios.get(`https://blog-horizon-backend.onrender.com/api/users/${currentUser.id}`, {
           withCredentials: true,
           headers: { Authorization: `Bearer ${token}` }
         });
@@ -171,7 +171,7 @@ const UserProfile = () => {
     try {
       const postData = new FormData();
       postData.set('avatar', avatar);
-      const response = await axios.post(`https://blog-horizon-backend.onrender.com/users/change-avatar`, postData, {
+      const response = await axios.post(`https://blog-horizon-backend.onrender.com/api/users/change-avatar`, postData, {
         withCredentials: true,
         headers: { Authorization: `Bearer ${token}` }
       });
@@ -191,7 +191,7 @@ const UserProfile = () => {
       userData.set('newPassword', newPassword);
       userData.set('confirmNewPassword', confirmNewPassword);
 
-      const response = await axios.patch(`https://blog-horizon-backend.onrender.com/users/edit-user`, userData, {
+      const response = await axios.patch(`https://blog-horizon-backend.onrender.com/api/users/edit-user`, userData, {
         withCredentials: true,
         headers: { Authorization: `Bearer ${token}` }
       });

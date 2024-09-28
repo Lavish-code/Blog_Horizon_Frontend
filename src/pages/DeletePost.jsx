@@ -73,7 +73,7 @@ const DeletePost = ({ postId: id }) => {
     setIsLoading(true);
     try {
       const response = await axios.delete(
-        `https://blog-horizon-backend.onrender.com/posts/${id}`,
+        `https://blog-horizon-backend.onrender.com/api/posts/${id}`,
         {
           withCredentials: true,
           headers: { Authorization: `Bearer ${token}` },
