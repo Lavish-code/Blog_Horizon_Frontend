@@ -1,18 +1,19 @@
 import React from 'react';
-import LoadingVideo from '../images/loading.mp4';
+import LoadingVideo from '../images/new_loading.mp4';
 
 const Loader = () => {
   const loaderStyle = {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: '100vh', // Adjust based on your layout
-  };
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  height: '50vh', // Reduced height to make it smaller
+};
 
-  const videoStyle = {
-    maxWidth: '100%', // Ensures responsiveness
-    maxHeight: '100%', // Ensures responsiveness
-  };
+const videoStyle = {
+  width: '300px', // Set a specific width for the video
+  height: 'auto', // Maintain aspect ratio
+};
+  
 
   return (
     <div style={loaderStyle}>
