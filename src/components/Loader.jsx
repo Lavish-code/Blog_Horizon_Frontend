@@ -1,27 +1,23 @@
 import React from 'react';
-import LoadingVideo from '../images/new_loading.mp4';
+import LoadingImage from '../images/loaderimage.png'; // Replace with your image path
 
 const Loader = () => {
   const loaderStyle = {
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  height: '50vh', // Reduced height to make it smaller
-};
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '50vh', // Retained height
+  };
 
-const videoStyle = {
-  width: '300px', // Set a specific width for the video
-  height: 'auto', // Maintain aspect ratio
-};
-  
+  const imageStyle = {
+    width: '300px', // Set a specific width for the image
+    height: 'auto', // Maintain aspect ratio
+  };
 
   return (
     <div style={loaderStyle}>
-      <div className="loader__video">
-        <video autoPlay loop muted style={videoStyle}>
-          <source src={LoadingVideo} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+      <div className="loader__image">
+        <img src={LoadingImage} alt="Loading..." style={imageStyle} />
       </div>
     </div>
   );
