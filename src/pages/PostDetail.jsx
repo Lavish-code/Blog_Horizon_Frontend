@@ -87,9 +87,9 @@ const PostDetail = () => {
     getPost();
   }, [id]); // Add id to the dependency array
 
-  if (isLoading) {
-    return <Loader />;
-  }
+  // if (isLoading) {
+  //   return <Loader />;
+  // }
 
   return (
     <section className="post-detail">
